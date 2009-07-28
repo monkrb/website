@@ -5,7 +5,7 @@ class HomeTest < Test::Unit::TestCase
     scenario "A visitor goes to the homepage" do
       visit "/"
 
-      assert_contain "Hello, world!"
+      assert_contain "Getting started"
     end
   end
 end
