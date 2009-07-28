@@ -228,10 +228,10 @@ module Sinatra
       render :erb, template, options, locals
     end
 
-    def haml(template, options={}, locals={})
+    def haml(template, options={}, locals={}, &block)
       require_warn('Haml') unless defined?(::Haml::Engine)
 
-      render :haml, template, options, locals
+      render :haml, template, options, locals, &block
     end
 
     def sass(template, options={}, locals={})
@@ -250,7 +250,7 @@ module Sinatra
     end
 
   private
-    def render(engine, template, options={}, locals={})
+    def render(engine, template, options={}, locals={}, &block)
       # merge app-level options
       options = self.class.send(engine).merge(options) if self.class.respond_to?(engine)
 
@@ -262,7 +262,7 @@ module Sinatra
 
       # render template
       data, options[:filename], options[:line] = lookup_template(engine, template, views)
-      output = __send__("render_#{engine}", template, data, options, locals)
+      output = __send__("render_#{engine}", template, data, options, locals, &block)
 
       # render layout
       if layout

@@ -1,10 +1,31 @@
 !!! Strict
 %html
   %head
-    %title
+    %title Monk
     %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
     %link{:rel => "stylesheet", :href => "/css/reset.css", :type => "text/css"}/
     %link{:rel => "stylesheet", :href => "/css/main.css", :type => "text/css"}/
 
   %body
-    != yield
+
+    #wrapper
+      #navigation
+        %ul
+          %li.first
+            %a{:href => "/"} Start
+          %li
+            %a{:href => "/"} Documentation
+          %li.last
+            %a{:href => "/contribute"} Contribute
+
+      #container
+        #toc
+
+        #content
+
+          != yield
+
+        #footer
+          Monk is an open source project sponsored by
+          %a{:href => "http://www.citrusbyte.com"}
+            %img{:src => "/images/cb.png", :alt => "Citrusbyte", :width => 108, :height => 29}

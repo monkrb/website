@@ -1,9 +1,11 @@
 body
-  :background-color white
   :font-family "Lucida Grande", sans-serif
-  :font-size 0.8em
-  :padding 15px
+  :font-size 12px
+  :padding 0
+  :margin 0
   :color #333
+  :text-align center
+  :background-color #f2f1e5
 
 =clearfix
   *display:     inline-block
@@ -25,11 +27,95 @@ body
   :font-weight bold
   :text-transform lowercase
 
+a
+  :color #920101
+
+#wrapper
+  :width 1200px
+  :margin 0 auto
+
+#navigation
+  :background url(/images/logo.png) no-repeat left top
+  :padding 147px 0 92px 603px
+  :position relative
+  :z-index 1
+
+  ul
+    +clearfix
+    :line-height 25px
+    :font-size 12px
+    :display block
+
+    li
+      :display block
+      :float left
+      :background url(/images/nav.png) no-repeat -8px top
+
+      &.first
+        :background-position left top
+
+      &.last
+        :background-position right top
+
+    a
+      :font-family "Helvetica", sans-serif
+      :text-decoration none
+      :color #fff
+      :display block
+      :padding 0 10px
+
+#container
+  +clearfix
+  :width 925px
+  :margin -25px auto 0 auto
+  :text-align left
+  :padding 0 0 20px 0
+
+  #toc
+    :width = 230px - 40px
+    :float left
+    :background-color #ecebd9
+    :padding 40px 20px
+    :margin 0 50px 0 0
+
+  #content
+    :float left
+    :width 645px
+    :margin 0 0 20px 0
+
+    p
+      :line-height 18px
+      :margin 5px 0
+
+    pre
+      code
+        :border 1px solid #e1ddc1
+        :background-color #f8f7f1
+        :display block
+        :padding 10px 15px
+        :margin 10px 0
+        :color #000
+
+#footer
+  :clear both
+  :background-color #edecda
+  :padding 20px 15px
+  :color #94927a
+  :font-size 11px
+  :text-align right
+
+  img
+    :vertical-align middle
+
 h1
-  :font-size 2em
+  :font-size 26px
+  :font-family Georgia
+  :font-weight normal
+  :margin 0 0 10px 0
 
 h2
-  :font-size 1.4em
+  :font-size 16px
+  :margin 20px 0 0 0
 
 form
   > p
