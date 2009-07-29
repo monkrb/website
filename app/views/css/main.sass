@@ -49,20 +49,31 @@ a
     li
       :display block
       :float left
-      :background url(/images/nav.png) no-repeat -8px top
+      :padding 0 0 17px 0
+
+      a
+        :background url(/images/nav.png) no-repeat -8px top
 
       &.first
-        :background-position left top
+        a
+          :background-position left top
 
       &.last
-        :background-position right top
+        a
+          :background-position right top
+
+      &.current
+        :background url(/images/nav-dec.png) no-repeat center bottom
+
+        a
+          :background-image url(/images/nav-selected.png)
 
     a
       :font-family "Helvetica", sans-serif
       :text-decoration none
       :color #fff
       :display block
-      :padding 0 10px
+      :padding 0 12px
 
 #container
   +clearfix

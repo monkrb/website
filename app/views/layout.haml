@@ -10,13 +10,10 @@
 
     #wrapper
       #navigation
-        %ul
-          %li.first
-            %a{:href => "/"} Start
-          %li
-            %a{:href => "/"} Documentation
-          %li.last
-            %a{:href => "/contribute"} Contribute
+        - navigation [ |
+            ["/", "Start"], |
+            ["/contribute", "Contribute"] |
+          ] |
 
       #container
         #toc
