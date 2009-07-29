@@ -1,3 +1,6 @@
+!header_width = 1200px
+!width = 1000px
+
 body
   :font-family "Lucida Grande", sans-serif
   :font-size 12px
@@ -27,18 +30,26 @@ body
   :font-weight bold
   :text-transform lowercase
 
+= serif
+  :font-family Georgia, serif
+
 a
   :color #920101
 
 #wrapper
-  :width 1200px
+  :width = !width
   :margin 0 auto
 
 #navigation
-  :background url(/images/logo.png) no-repeat left top
-  :padding 147px 0 92px 603px
+  :background
+    :image url(/images/logo.png)
+    :repeat no-repeat
+    :position = - (!header_width - !width) / 3
+
+  :padding 147px 0 75px 603px
   :position relative
   :z-index 1
+  :zoom 1
 
   ul
     +clearfix
@@ -66,6 +77,7 @@ a
         :background url(/images/nav-dec.png) no-repeat center bottom
 
         a
+          :color #ffba00
           :background-image url(/images/nav-selected.png)
 
     a
@@ -85,9 +97,32 @@ a
   #toc
     :width = 230px - 40px
     :float left
-    :background-color #ecebd9
-    :padding 40px 20px
-    :margin 0 50px 0 0
+    :background #ecebd9 url(/images/sidebar-top.png) no-repeat center 40px
+    :padding 80px 20px 40px 20px
+    :margin 0 50px 20px 0
+    :text-align center
+
+    ul
+      :background url(/images/sidebar-bottom.png) no-repeat center bottom
+      :margin 0
+      :padding 0 0 40px 0
+
+      li
+        :background url(/images/sidebar-sep.png) no-repeat center bottom
+        :padding 10px 0
+
+        &:last-child
+          :background-image none
+
+      a
+        +serif
+        :font-size 15px
+        :text-decoration none
+        :color #920101
+
+        &:hover
+          :text-decoration underline
+
 
   #content
     :float left
