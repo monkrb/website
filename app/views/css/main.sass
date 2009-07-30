@@ -1,5 +1,6 @@
 !header_width = 1200px
 !width = 1000px
+!link_color = "#920101"
 
 body
   :font-family "Lucida Grande", sans-serif
@@ -34,7 +35,8 @@ body
   :font-family Georgia, serif
 
 a
-  :color #920101
+  :color = !link_color
+  :text-decoration none
 
 #wrapper
   :width = !width
@@ -118,7 +120,7 @@ a
         +serif
         :font-size 15px
         :text-decoration none
-        :color #920101
+        :color = !link_color
 
         &:hover
           :text-decoration underline
@@ -141,6 +143,27 @@ a
         :padding 10px 15px
         :margin 10px 0
         :color #000
+
+    ul
+      :list-style disc
+      :margin-left 2em
+
+      li
+        :line-height 1.5em
+    a
+      :border-bottom 1px solid pink
+
+      &:hover
+        :border-bottom 1px solid
+        :border-color = !link_color
+
+    blockquote
+      :border 1px solid #e1ddc1
+      :background-color #fff9d8
+      :display block
+      :padding 10px 15px
+      :margin 10px 0
+      :color #660
 
 #footer
   :clear both

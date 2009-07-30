@@ -1,6 +1,5 @@
 # How can you help? #
 
-
 ## Get involved ##
 
 Join the [mailing list](http://groups.google.com/group/monkrb).

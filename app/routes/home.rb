@@ -16,7 +16,9 @@ class Main
   end
 
   get "/" do
-    haml :home
+    haml(:layout, :layout => false) do
+      markdown :home, :layout => false
+    end
   end
 
   get "/contribute" do
