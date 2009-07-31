@@ -13,6 +13,7 @@ own versions of the skeleton app and your own list of dependencies. You
 can add many different templates (different git repositories) and Monk
 will help you manage them all.
 
+
 Getting started
 ---------------
 
@@ -23,7 +24,7 @@ Monk makes the following assumptions:
 - You are familiar with [RubyGems](/help/gems).
 - You have [git](/help/git) installed.
 
-If you are ready for the rest, we can install Monk:
+If you are ready for the rest, start by installing Monk:
 
     $ sudo gem install monk
 
@@ -57,6 +58,14 @@ now what goes where. If you don't, you can read more about
 [helpers](/app/helpers), [models](/app/models), [routes](/app/routes)
 and [views](/app/views).
 
-> Note that this is what you get from the default skeleton. You can add
+> Note that this is what you get with the default skeleton. You can add
 > other skeletons to your monk configuration and even replace the default
-> one. [More](more).
+> one. [More](/help/skeletons).
+
+Another usual suspects:
+
+    /lib
+    /vendor
+
+You can require everything you put in those two directories. Vendor is
+special, though, thanks to the [dependencies](/help/dependencies) gem.
