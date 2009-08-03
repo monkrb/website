@@ -13,7 +13,6 @@ own versions of the skeleton app and your own list of dependencies. You
 can add many different templates (different git repositories) and Monk
 will help you manage them all.
 
-
 Getting started
 ---------------
 
@@ -22,7 +21,7 @@ Monk makes the following assumptions:
 - You know how to program in [Ruby](/help/ruby).
 - You are familiar with [Sinatra](/help/sinatra).
 - You are familiar with [RubyGems](/help/gems).
-- You have [git](/help/git) installed.
+- You have [Git](/help/git) installed.
 
 If you are ready for the rest, start by installing Monk:
 
@@ -36,36 +35,9 @@ applications. Now create your first Monk project:
 This command fetches an application structure with git, along with a
 list of dependencies.
 
-
-Project structure
------------------
-
-The basic structure has some key elements:
-
-    /app
-
-This is where most of your code will go. Since Rails, most of the
-[MVC](/help/model-view-controller) frameworks have adhered to this
-convention. Inside you will find four directories:
-
-    /app/helpers
-    /app/models
-    /app/routes
-    /app/views
-
-If you are familiar with Sinatra and Rails, you may know by
-now what goes where. If you don't, you can read more about
-[helpers](/app/helpers), [models](/app/models), [routes](/app/routes)
-and [views](/app/views).
-
 > Note that this is what you get with the default skeleton. You can add
 > other skeletons to your monk configuration and even replace the default
 > one. [More](/help/skeletons).
 
-Another usual suspects:
-
-    /lib
-    /vendor
-
-You can require everything you put in those two directories. Vendor is
-special, though, thanks to the [dependencies](/help/dependencies) gem.
+Next: [Project structure](/skeletons/default)
+=============================================

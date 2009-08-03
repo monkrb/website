@@ -26,4 +26,10 @@ class Main
       markdown :contribute, :layout => false
     end
   end
+
+  get "/skeletons/:skeleton" do |skeleton|
+    haml(:layout, :layout => false) do
+      markdown :"skeletons/#{skeleton}", :layout => false
+    end
+  end
 end
