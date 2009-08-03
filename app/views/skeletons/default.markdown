@@ -39,7 +39,7 @@ Another usual suspects:
     /vendor
 
 You can require everything you put in those two directories. Vendor is
-special, though, thanks to the [dependencies](/help/dependencies) gem.
+special, though, thanks to the [dependencies](/help/vendor-everything) gem.
 
 
 Dependencies
@@ -48,5 +48,5 @@ Dependencies
 Run `dep list` in your project root to see what dependencies are
 needed for the curren environment. You can also supply the environment
 as a second parameter: `dep list test`. Make sure to read the [help
-guide](/help/dependencies) to see what else you can do and how you can
+guide](/help/vendor-everything) to see what else you can do and how you can
 add, modify or remove your project's dependencies.

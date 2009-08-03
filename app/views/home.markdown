@@ -1,12 +1,15 @@
 Monk, the glue framework
 ========================
 
-Monk is a glue framework for web development. It means that instead of
-installing all the tools you need for your projects, you can rely on a
-Git repository and a list of dependencies, and Monk takes care of the
-rest. By default, it ships with a Sinatra application that includes
-Contest, Stories, Webrat, Ohm and some other niceties, along with a
-structure and helpful documentation to get your hands wet in no time.
+Monk is a glue framework for web development. It means that instead
+of installing all the tools you need for your projects, you can
+rely on a Git repository and a list of dependencies, and Monk takes
+care of the rest. By default, it ships with a Sinatra application
+that includes [Contest](http://github.com/citrusbyte/contest),
+[Stories](http://github.com/citrusbyte/stories),
+[Webrat](http://wiki.github.com/brynary/webrat),
+[Ohm](http://github.com/soveran/ohm) and some other niceties, along with
+a structure and helpful documentation to get your hands wet in no time.
 
 But Monk also respects your tastes, and you are invited to create your
 own versions of the skeleton app and your own list of dependencies. You
@@ -38,4 +41,4 @@ list of dependencies.
 > one. [More](/help/skeletons).
 
 Next: [Project structure](/skeletons/default)
-=============================================
+---------------------------------------------
