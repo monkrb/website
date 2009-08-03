@@ -30,8 +30,8 @@ class Main
     markdown_in_haml :contribute
   end
 
-  get "/skeletons/:skeleton" do |skeleton|
-    markdown_in_haml :"skeletons/#{skeleton}"
+  get "/app" do |skeleton|
+    markdown_in_haml :app
   end
 
   get "/help/:page" do |page|
