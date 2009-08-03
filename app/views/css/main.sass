@@ -34,6 +34,12 @@ body
 = serif
   :font-family Georgia, serif
 
+= hover
+  :text-decoration none
+
+  &:hover
+    :text-decoration underline
+
 a
   :color = !link_color
   :text-decoration none
@@ -102,29 +108,36 @@ a
     :background #ecebd9 url(/images/sidebar-top.png) no-repeat center 40px
     :padding 80px 20px 40px 20px
     :margin 0 50px 20px 0
-    :text-align center
+    :text-align left
 
-    ul
+    ol
       :background url(/images/sidebar-bottom.png) no-repeat center bottom
       :margin 0
-      :padding 0 0 40px 0
+      :padding 0 0 40px 20px
+      :list-style-type decimal
+      :color #888
 
-      li
-        :background url(/images/sidebar-sep.png) no-repeat center bottom
-        :padding 10px 0
+      > li
+        :margin 13px 0
 
         &:last-child
           :background-image none
 
+        > a
+          +serif
+          :font-size 15px
       a
-        +serif
-        :font-size 15px
-        :text-decoration none
-        :color = !link_color
+        +hover
 
-        &:hover
-          :text-decoration underline
+      ul
+        :margin 0 0 0 15px
 
+        a
+          :color #333
+
+        li
+          :margin 5px 0
+          :list-style-type square
 
   #content
     :float left
