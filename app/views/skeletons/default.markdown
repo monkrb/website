@@ -12,8 +12,8 @@ This skeleton has the following requirements:
 - You must have [Redis](/help/redis) installed.
 - You may be familiar with [TDD and User Stories](/help/stories).
 
-Project structure
------------------
+Directory layout
+----------------
 
 The basic structure has some key elements:
 
@@ -40,6 +40,10 @@ Another usual suspects:
 
 You can require everything you put in those two directories. Vendor is
 special, though, thanks to the [dependencies](/help/dependencies) gem.
+
+
+Dependencies
+------------
 
 Run `dep list` in your project root to see what dependencies are
 needed for the curren environment. You can also supply the environment
