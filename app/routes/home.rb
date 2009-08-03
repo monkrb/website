@@ -13,23 +13,28 @@ class Main
     def render_markdown(template, data, options, locals, &block)
       ::Maruku.new(data).to_html
     end
+
+    def markdown_in_haml(template, options = {}, locals = {})
+      haml(:layout, :layout => false) do
+        options[:layout] = false
+        markdown(template, options, locals)
+      end
+    end
   end
 
   get "/" do
-    haml(:layout, :layout => false) do
-      markdown :home, :layout => false
-    end
+    markdown_in_haml :home
   end
 
   get "/contribute" do
-    haml(:layout, :layout => false) do
-      markdown :contribute, :layout => false
-    end
+    markdown_in_haml :contribute
   end
 
   get "/skeletons/:skeleton" do |skeleton|
-    haml(:layout, :layout => false) do
-      markdown :"skeletons/#{skeleton}", :layout => false
-    end
+    markdown_in_haml :"skeletons/#{skeleton}"
+  end
+
+  get "/help/:page" do |page|
+    markdown_in_haml :"help/#{page}"
   end
 end
