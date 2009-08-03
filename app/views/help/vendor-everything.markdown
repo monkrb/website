@@ -1,7 +1,7 @@
 # Vendor everything #
 
 Monk applications use the Dependencies gem to specify which libraries they depend on.
-It's a simple text file called `./dependencies`:
+It uses a simple text file called `./dependencies`:
 
     sinatra 0.9.4
     haml    2.2.2
@@ -33,3 +33,20 @@ Dependencies allows you to specify a URL, rather than a version, so you can live
     contest (test) git://github.com/citrusbyte/contest.git
 
 If you run `dep vendor sinatra`, you'll be cloning the Git repository directly, rather than using a gem. The resulting directory is also `./vendor/sinatra`.
+
+## Updating a vendored library ##
+
+In order to update a vendored library, remove the directory in `/vendor`, change the version in the `./dependencies` file and run `dep vendor` again.
+
+For example, if you have Sinatra 0.9.2 installed and you want to upgrade to Sinatra 0.9.4, you would proceed as follows:
+
+    # Change the version in ./dependencies
+    sinatra 0.9.4
+
+    # Remove the vendored version.
+    $ rm -rf vendor/sinatra-0.9.2
+
+    # Vendor the new version.
+    $ dep vendor sinatra
+
+Read more about dependencies [here](http://github.com/djanowski/dependencies).
