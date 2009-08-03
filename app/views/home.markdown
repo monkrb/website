@@ -18,9 +18,7 @@ Getting started
 
 Monk makes the following assumptions:
 
-- You know how to program in [Ruby](/help/ruby).
 - You are familiar with [Sinatra](/help/sinatra).
-- You are familiar with [RubyGems](/help/gems).
 - You have [Git](/help/git) installed.
 
 If you are ready for the rest, start by installing Monk:
