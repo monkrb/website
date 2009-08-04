@@ -16,7 +16,7 @@ If you do chose to use haml as your template, Monk has some helper methods that 
 
 To render a partial, just use the partial method inside any view
 
-    #composers
-      = partial :composers, composers => @composers
+    = partial :games, :players => @players
 
-Just specify the name of the partial you want to render and pass the local variables.
+
+Just specify the name of the partial you want to render and pass the local variables. This will look for app/views/games.haml

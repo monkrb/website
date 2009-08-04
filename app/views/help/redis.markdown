@@ -1,6 +1,6 @@
 # Redis, a simple key-value store #
 
-The default skeleton ships with [Ohm](http://github.com/soveran/ohm), a persistence layer that uses [Redis](http://code.google.com/p/redis).
+The default skeleton ships with [Ohm](/help/ohm), a persistence layer that uses [Redis](http://code.google.com/p/redis).
 
 ## Installing Redis ##
 
