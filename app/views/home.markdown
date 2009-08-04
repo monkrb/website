@@ -40,5 +40,5 @@ list of dependencies.
 > other skeletons to your monk configuration and even replace the default
 > one. [More](/help/skeletons).
 
-Next: [Project structure](/app)
+Next: [Project structure](/structure)
 ---------------------------------------------
