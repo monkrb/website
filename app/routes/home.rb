@@ -30,8 +30,12 @@ class Main
     markdown_in_haml :contribute
   end
 
-  get "/app" do |skeleton|
-    markdown_in_haml :app
+  get "/structure" do
+    markdown_in_haml :structure
+  end
+
+  get "/structure/:component" do |component|
+    markdown_in_haml :"structure/#{component}"
   end
 
   get "/help/:page" do |page|

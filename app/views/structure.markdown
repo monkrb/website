@@ -30,8 +30,8 @@ convention. Inside you will find four directories:
 
 If you are familiar with Sinatra and Rails, you may know by
 now what goes where. If you don't, you can read more about
-[helpers](/app/helpers), [models](/app/models), [routes](/app/routes)
-and [views](/app/views).
+[helpers](/structure/helpers), [models](/structure/models), [routes](/structure/routes)
+and [views](/structure/views).
 
 Another usual suspects:
 
