@@ -1,4 +1,4 @@
-Ohm ॐ (Object-hash mapping)
+Ohm ॐ
 ===========================
 
 Description
