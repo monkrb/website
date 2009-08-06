@@ -38,6 +38,10 @@ class Main
     markdown_in_haml :"structure/#{component}"
   end
 
+  get "/dependencies" do
+    markdown_in_haml :dependencies
+  end
+
   get "/help/:page" do |page|
     markdown_in_haml :"help/#{page}"
   end

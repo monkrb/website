@@ -38,7 +38,7 @@ list of dependencies.
 
 > Note that this is what you get with the default skeleton. You can add
 > other skeletons to your monk configuration and even replace the default
-> one. [More](/help/skeletons).
+> one. [More](/skeletons).
 
 Next: [Project structure](/structure)
----------------------------------------------
+-------------------------------------

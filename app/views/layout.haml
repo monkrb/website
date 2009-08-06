@@ -2,9 +2,9 @@
 %html
   %head
     %title Monk
-    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
-    %link{:rel => "stylesheet", :href => "/css/reset.css", :type => "text/css"}/
-    %link{:rel => "stylesheet", :href => "/css/main.css", :type => "text/css"}/
+    %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")/
+    %link(rel="stylesheet" href="/css/reset.css" type="text/css")/
+    %link(rel="stylesheet" href="/css/main.css" type="text/css")/
 
   %body
 
@@ -36,6 +36,9 @@
                   %a(href="/structure/models") Models
 
             %li
+              %a(href="/dependencies") Dependencies
+
+            %li
               %a(href="/skeletons") Skeletons
 
         #content
@@ -44,5 +47,5 @@
 
         #footer
           Monk is an open source project sponsored by
-          %a{:href => "http://www.citrusbyte.com"}
-            %img{:src => "/images/cb.png", :alt => "Citrusbyte", :width => 108, :height => 29}
+          %a(href="http://www.citrusbyte.com")
+            %img(src="/images/cb.png" alt="Citrusbyte" width=108 height=29)
