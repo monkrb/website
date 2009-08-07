@@ -42,6 +42,10 @@ class Main
     markdown_in_haml :dependencies
   end
 
+  get "/skeletons" do
+    markdown_in_haml :skeletons
+  end
+
   get "/help/:page" do |page|
     markdown_in_haml :"help/#{page}"
   end
