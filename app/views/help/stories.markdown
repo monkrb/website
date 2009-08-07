@@ -25,7 +25,7 @@ This is an example of a user story written with Stories:
       end
     end
 
-Stories alouds you to keep it simple and avoid having to translate English to code, just to have a pretty output.
+Stories alllows you to keep it simple and avoid having to translate English to code, just to have a pretty output.
 
 Instead of that, when you run your tests with the **stories runner**, you get this output:
 
