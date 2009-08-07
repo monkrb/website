@@ -46,6 +46,10 @@ class Main
     markdown_in_haml :skeletons
   end
 
+  get "/about" do
+    markdown_in_haml :about
+  end
+
   get "/help/:page" do |page|
     markdown_in_haml :"help/#{page}"
   end

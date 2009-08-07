@@ -10,7 +10,7 @@ Requirements
 This skeleton has the following requirements:
 
 - You must have [Redis](/help/redis) installed.
-- You may be familiar with [TDD and User Stories](/help/stories).
+- You may be familiar with TDD and User Stories.
 
 Directory layout
 ----------------
