@@ -1,7 +1,7 @@
 Views
 =====
 
-You will find them within
+You will find them in
 
     /app/views
 
