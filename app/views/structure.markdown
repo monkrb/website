@@ -20,7 +20,7 @@ The basic structure has some key elements:
     /app
 
 This is where most of your code will go. Since Rails came out, most of the
-[MVC](/help/model-view-controller) frameworks have adhered to this
+Model-View-Controller frameworks have adhered to this
 convention. Inside you will find four directories:
 
     /app/helpers
@@ -39,7 +39,7 @@ Another usual suspects:
     /vendor
 
 You can require everything you put in those two directories. Vendor is
-special, though, thanks to the [dependencies](/help/vendor-everything) gem.
+special, though, thanks to the [dependencies](/dependencies) gem.
 
 Next: [Dependencies](/dependencies)
 -----------------------------------
