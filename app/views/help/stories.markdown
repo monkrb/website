@@ -25,7 +25,7 @@ This is an example of a user story written with Stories:
       end
     end
 
-Stories alllows you to keep it simple and avoid having to translate English to code, just to have a pretty output.
+Stories allows you to keep it simple and avoid having to translate English to code, just to have a pretty output.
 
 Instead of that, when you run your tests with the **stories runner**, you get this output:
 
@@ -40,4 +40,4 @@ Instead of that, when you run your tests with the **stories runner**, you get th
 
 You can customize the output for any webrat method, silence or report a custom message for a group of steps and even generate a breathtaking PDF with the **stories pdf-runner**.
 
-*Please take a look at the [Stories documentation](http://github.com/citrusbyte/stories/tree/master) and rediscover the meaning of Test Driven Development.*
+Please take a look at the [Stories documentation](http://github.com/citrusbyte/stories/tree/master) and rediscover the meaning of Test Driven Development.
