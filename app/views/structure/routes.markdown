@@ -3,7 +3,7 @@ Routes
 
 You will find them in
 
-    /app/routes
+    ./app/routes
 
 [Monk plays with Sinatra](/help/sinatra), so make sure you are familiar with Sinatra's [documentation](http://www.sinatrarb.com/book.html#routes).
 

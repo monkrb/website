@@ -3,7 +3,7 @@ Helpers
 
 You will find them in
 
-    /app/helpers
+    ./app/helpers
 
 The helpers must have this structure:
 

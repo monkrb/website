@@ -3,7 +3,7 @@ Views
 
 You will find them in
 
-    /app/views
+    ./app/views
 
 The default [skeleton](/skeletons) comes with [Haml](http://haml-lang.com), and we highly recommend it.
 

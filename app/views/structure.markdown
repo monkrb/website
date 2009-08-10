@@ -17,26 +17,26 @@ Directory layout
 
 The basic structure has some key elements:
 
-    /app
+    ./app
 
 This is where most of your code will go. Since Rails came out, most of the
 Model-View-Controller frameworks have adhered to this
 convention. Inside you will find four directories:
 
-    /app/helpers
-    /app/models
-    /app/routes
-    /app/views
+    ./app/helpers
+    ./app/models
+    ./app/routes
+    ./app/views
 
 If you are familiar with Sinatra and Rails, you may know by
 now what goes where. If you don't, you can read more about
 [helpers](/structure/helpers), [models](/structure/models), [routes](/structure/routes)
 and [views](/structure/views).
 
-Another usual suspects:
+Other usual suspects:
 
-    /lib
-    /vendor
+    ./lib
+    ./vendor
 
 You can require everything you put in those two directories. Vendor is
 special, though, thanks to the [dependencies](/dependencies) gem.

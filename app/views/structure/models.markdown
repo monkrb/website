@@ -3,7 +3,7 @@ Models
 
 You will find them in
 
-    /app/models
+    ./app/models
 
 The default [skeleton](/help/skeleton) comes with [Ohm](/help/ohm), which takes full advantage of [Redis](/help/redis).
 
