@@ -4,11 +4,12 @@
 
 Join the [mailing list](http://groups.google.com/group/monkrb).
 
+Meet us on IRC: [#monk](irc://chat.freenode.net/#monk) on [freenode.net](http://freenode.net)
 
 ## Share your skeleton ##
 
 Share your stack with the world.
-Tell us about it on the mailing list and we'll include it in the Skeletons section.
+Tell us about it on the mailing list and we'll include it in the [skeletons](/skeletons) section.
 
 The default skeleton is located at [http://github.com/monkrb/skeleton](http://github.com/monkrb/skeleton/tree/master).
 
