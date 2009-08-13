@@ -30,6 +30,10 @@ class Main
     markdown_in_haml :contribute
   end
 
+  get "/faq" do
+    markdown_in_haml :faq
+  end
+
   get "/structure" do
     markdown_in_haml :structure
   end
