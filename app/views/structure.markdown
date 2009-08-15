@@ -41,5 +41,5 @@ Other usual suspects:
 You can require everything you put in those two directories. Vendor is
 special, though, thanks to the [dependencies](/dependencies) gem.
 
-Next: [Dependencies](/dependencies)
------------------------------------
+Next: [Routes](/structure/routes)
+---------------------------------

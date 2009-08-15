@@ -18,3 +18,6 @@ The helpers must have this structure:
     end
 
 These are regular Sinatra helpers. Check the [documentation](http://www.sinatrarb.com/book.html#helpers) to find out more.
+
+Next: [Dependencies](/dependencies)
+-----------------------------------

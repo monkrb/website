@@ -19,3 +19,6 @@ In Monk, your routes must have this structure:
     end
 
 Actually, Monk ships with two sample routes located in `app/routes/home.rb` and `app/routes/css.rb`. The first one is like a hello world, something you can take a look at and modify at pleasure. The route for CSS is a convenient way to process your [Sass](http://sass-lang.com) files stored in `app/views/css`.
+
+Next: [Views](/structure/views)
+-------------------------------

@@ -46,6 +46,10 @@ class Main
     markdown_in_haml :skeletons
   end
 
+  get "/testing" do
+    markdown_in_haml :testing
+  end
+
   get "/about" do
     markdown_in_haml :about
   end
