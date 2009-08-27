@@ -35,5 +35,15 @@ pageTracker._trackPageview();
 } catch(err) {}</script>
       EOS
     end
+
+    def lloogg(code)
+      <<-EOS
+<script type="text/javascript">
+lloogg_clientid = "#{code}";
+</script>
+<script type="text/javascript" src="http://lloogg.com/l.js?c=#{code}">
+</script>
+      EOS
+    end
   end
 end
