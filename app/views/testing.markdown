@@ -1,16 +1,15 @@
 Testing with Stories
 ====================
 
-Instead of starting by implementing the application on a lower level (i.e: models) and then defining the functionality you actually want, another option is to write the [user stories](http://en.wikipedia.org/wiki/User_story) that define a project (rather than tasks or other methodologies) and start working from there. This represents an [outside-in approach](http://dannorth.net/whats-in-a-story).
+The outside-in approach to testing, as [described by Dan North](http://dannorth.net/whats-in-a-story), “starts at the outside by identifying business outcomes, and then drills down into the feature set that will achieve those outcomes. Each feature is captured as a story, which defines the scope of the feature along with its acceptance criteria.”
 
-For example, say you have this story:
+People familiar with [Cucumber](http://cukes.info) may find it easy to transition to [Stories](/help/stories). The idea is to define [user stories](http://en.wikipedia.org/wiki/User_story), describe the possible scenarios, and write the steps needed to fulfill them. The collection of scenarios and steps constitute the [acceptance tests](http://en.wikipedia.org/wiki/Acceptance_testing) for user stories.
+
+As an example, say we have this user story:
 
       As a user I want to log in so I can access restricted features
 
-Your first instinct might be to create a User model, and start writing some specs. The part of actually logging in comes much later, and when you do have to implement it, you may be bound to your model implementation limitations, because you weren't completely sure of what you wanted to achieve in the first place.
-
-
-Our strategy is different. First of all, we define what we want by creating the integration tests using webrat and stories. For example:
+We can define the steps with Stories and Webrat:
 
     class UserStoriesTest < ActionController::IntegrationTest
       story "As a user I want to log in so I can access restricted features" do
@@ -30,11 +29,9 @@ Our strategy is different. First of all, we define what we want by creating the 
       end
     end
 
-NOTE: If you are not familiar with the gem [Spawn](/help/spawn), you may want to check it out.
+With these definitions in place (make sure to add more scenarios!), we can start working on the application. This doesn't mean unit testing is out of the picture, only that it must always be tied to the business outcomes defined at the highest level. The risk of starting at the lowest level (unit testing models before defining the acceptance tests) is that the application may suffer from artificial limitations imposed by early modeling.
 
-Now you have a very clear vision of the story. This doesn't mean unit testing is out of the picture, but it should be used only when necessary.
-
-Notice that when this story passes, your work is finished and you can mark that story as complete.
+Note that when this story passes, your work is finished and you can mark that story as complete.
 When you run it, you will get this output:
 
     As a user I want to log in so I can access restricted features
@@ -67,7 +64,7 @@ This is generated automatically and looks pretty good out of the box. However, i
       end
     end
 
-If you run that test now you will get the same output as before. This is not a bug, it just means that there is no standard report for that Webrat method yet. All you have to do is define it however you like to, in your test helper.
+If you run that test now you will get the same output as before. This is not a bug, it just means that there is no standard report for that Webrat method yet. All you have to do is define it the way you like it in your test helper.
 
     module Stories::Webrat
       report_for :assert_response do |response|
@@ -87,7 +84,7 @@ Now when you run the test you will get this output:
           The response should be 200
           I should see “Welcome Albert”
 
-`report_for` lets you customize or add a description for a Webrat method, the way you want it to be on your output.
+The helper `report_for` lets you customize or add a description for a Webrat method.
 
 So far so good. Lets assume now that you are not interested in having all those steps in your output, only to describe a user logging in. Fair enough, we can group the steps into a single report message.
 
