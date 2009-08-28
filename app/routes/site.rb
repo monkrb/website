@@ -53,7 +53,7 @@ class Main
   get "/skeletons/:component" do |component|
     require "dependencies/dep"
 
-    @skeletons = YAML.load_file("config/skeletons.yml")
+    @skeletons = YAML.load_file(root_path("config", "skeletons.yml"))
     @all = []
 
     @skeletons.keys.each do |skeleton|
