@@ -46,6 +46,31 @@ class Main
     markdown_in_haml :skeletons
   end
 
+  get "/skeletons/:component" do |component|
+    require "dependencies/dep"
+
+    @skeletons = YAML.load_file("config/skeletons.yml")
+    @all = []
+
+    @skeletons.keys.each do |skeleton|
+      deps = dependencies_for(skeleton)
+      @skeletons[skeleton][:dependencies] = deps
+      @all += deps
+    end
+
+    @all = @all.uniq.sort
+
+    haml :"skeletons/#{component}"
+  end
+
+  def dependencies_for(name)
+    extract_name_and_version("skeletons/#{name}/dependencies")
+  end
+
+  def extract_name_and_version(file)
+    Dep.new(File.read(file)).map { |d| [d.name, d.version].compact }
+  end
+
   get "/testing" do
     markdown_in_haml :testing
   end

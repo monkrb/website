@@ -21,5 +21,5 @@ You can also replace the default skeleton:
 
 And now every time you run `monk init`, you will be using your custom project structure.
 
-Next: [Testing](/testing)
--------------------------
+Next: [Directory](/skeletons/directory)
+---------------------------------------
