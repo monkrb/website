@@ -38,7 +38,8 @@ class Monk < Thor
     skeletons = YAML.load_file("config/skeletons.yml")
     skeletons.each do |skeleton, attributes|
       remove_dir "skeletons/#{skeleton}"
-      clone attributes[:repo], "skeletons/#{skeleton}"
+      say_status :fetching, skeleton
+      system "git clone -q --depth 1 #{attributes[:repo]} skeletons/#{skeleton}"
     end
   end
 
