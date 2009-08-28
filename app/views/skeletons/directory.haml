@@ -1,0 +1,28 @@
+%h1 Skeletons Directory
+
+Below is a list of the available skeletons and their dependencies.
+
+%table.skeletons-directory
+  %tr
+    %td.library
+      Library
+    %td.version
+      Version
+    - @skeletons.keys.sort.each do |name|
+      %td.name
+        = name
+  - @all.each do |dep|
+    %tr
+      %td.name
+        = dep[0]
+      %td
+        = dep[1]
+
+      - @skeletons.keys.sort.each do |name|
+        %td.dependency
+          - if @skeletons[name][:dependencies].include?(dep)
+            ✔
+
+%h2
+  Next:
+  %a(href="/testing") Testing

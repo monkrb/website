@@ -18,3 +18,6 @@ Just specify the name of the partial you want to render and pass the local varia
     = partial :games, :players => @players
 
 This will look for `app/views/games.haml` and the template will have access to the `players` local variable.
+
+Next: [Models](/structure/models)
+---------------------------------

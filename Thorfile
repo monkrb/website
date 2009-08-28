@@ -33,8 +33,16 @@ class Monk < Thor
     copy_example(example) unless File.exists?(target_file_for(example))
   end
 
-private
+  desc "update_skeletons", "Updates the skeletons repositories"
+  def update_skeletons
+    skeletons = YAML.load_file("config/skeletons.yml")
+    skeletons.each do |skeleton, attributes|
+      remove_dir "skeletons/#{skeleton}"
+      clone attributes[:repo], "skeletons/#{skeleton}"
+    end
+  end
 
+private
 
   def self.source_root
     File.dirname(__FILE__)

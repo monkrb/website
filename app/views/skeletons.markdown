@@ -20,3 +20,6 @@ You can also replace the default skeleton:
     $ monk add default git://github.com/myaccount/foobar.git
 
 And now every time you run `monk init`, you will be using your custom project structure.
+
+Next: [Directory](/skeletons/directory)
+---------------------------------------
