@@ -35,11 +35,11 @@ namespace :deploy do
 
   desc "Generate static CSS"
   task :sass, :roles => :app do
-    run "cd #{release_path} && env RACK_ENV=#{fetch :rack_env} ./vendor/thor/bin/thor monk:sass"
+    run "cd #{current_path} && env RACK_ENV=#{fetch :rack_env} ./vendor/thor/bin/thor monk:sass"
   end
 
   desc "Refresh all skeletons"
   task :update_skeletons, :roles => :app do
-    run "cd #{release_path} && env RACK_ENV=#{fetch :rack_env} ./vendor/thor/bin/thor monk:update_skeletons"
+    run "cd #{current_path} && env RACK_ENV=#{fetch :rack_env} ./vendor/thor/bin/thor monk:update_skeletons"
   end
 end
