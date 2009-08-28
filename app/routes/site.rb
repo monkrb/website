@@ -67,6 +67,12 @@ class Main
     haml :"skeletons/#{component}"
   end
 
+  get "/skeletons/directory/:skeleton" do |skeleton|
+    @skeleton = YAML.load_file(root_path("config", "skeletons.yml"))[skeleton]
+    @skeleton[:name] = skeleton
+    haml :"skeletons/directory/skeleton"
+  end
+
   def dependencies_for(name)
     extract_name_and_version(root_path("skeletons/#{name}/dependencies"))
   end

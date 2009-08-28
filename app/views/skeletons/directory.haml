@@ -4,13 +4,18 @@ Below is a list of the available skeletons and their dependencies.
 
 %table.skeletons-directory
   %tr
-    %td.library
-      Library
-    %td.version
-      Version
+    %td(colspan=2)
     - @skeletons.keys.sort.each do |name|
       %td.name
-        = name
+        %a.facebox(href="#instructions-#{name}")= name
+        %div(id="instructions-#{name}" class="instructions")
+          %p Execute the following code to add this skeleton to your list.
+          %pre
+            %code monk add #{name} #{@skeletons[name][:repo]}
+
+          %p Run this command to create a new project
+          %pre
+            %code monk init --skeleton=#{name} myapp
   - @all.each do |dep|
     %tr
       %td.name
