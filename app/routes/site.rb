@@ -68,7 +68,7 @@ class Main
   end
 
   def dependencies_for(name)
-    extract_name_and_version("skeletons/#{name}/dependencies")
+    extract_name_and_version(root_path("skeletons/#{name}/dependencies"))
   end
 
   def extract_name_and_version(file)
