@@ -56,9 +56,9 @@ class Main
     @skeletons = YAML.load_file(root_path("config", "skeletons.yml"))
     @all = []
 
-    @skeletons.keys.each do |skeleton|
-      deps = dependencies_for(skeleton)
-      @skeletons[skeleton][:dependencies] = deps
+    @skeletons.each do |skeleton|
+      deps = dependencies_for(skeleton[:name])
+      skeleton[:dependencies] = deps
       @all += deps
     end
 

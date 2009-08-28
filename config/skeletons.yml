@@ -1,7 +1,13 @@
-default:
+---
+- :name: default
   :url: http://monkrb.com/structure
   :repo: git://github.com/monkrb/skeleton.git
 
-lazybones:
+- :name: cartilage
+  :url: http://github.com/tobyjoe/cartilage/tree/master
+  :repo: git://github.com/tobyjoe/cartilage.git
+
+- :name: lazybones
   :url: http://github.com/tobyjoe/lazybones/tree/master
   :repo: git://github.com/tobyjoe/lazybones.git
+

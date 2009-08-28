@@ -36,10 +36,10 @@ class Monk < Thor
   desc "update_skeletons", "Updates the skeletons repositories"
   def update_skeletons
     skeletons = YAML.load_file("config/skeletons.yml")
-    skeletons.each do |skeleton, attributes|
-      remove_dir "skeletons/#{skeleton}"
-      say_status :fetching, skeleton
-      system "git clone -q --depth 1 #{attributes[:repo]} skeletons/#{skeleton}"
+    skeletons.each do |skeleton|
+      remove_dir "skeletons/#{skeleton[:name]}"
+      say_status :fetching, skeleton[:name]
+      system "git clone -q --depth 1 #{skeleton[:repo]} skeletons/#{skeleton[:name]}"
     end
   end
 

@@ -5,17 +5,17 @@ Below is a list of the available skeletons and their dependencies.
 %table.skeletons-directory
   %tr
     %td(colspan=2)
-    - @skeletons.keys.sort.each do |name|
+    - @skeletons.each do |skeleton|
       %td.name
-        %a.facebox(href="#instructions-#{name}")= name
-        %div(id="instructions-#{name}" class="instructions")
+        %a.facebox(href="#instructions-#{skeleton[:name]}")= skeleton[:name]
+        %div(id="instructions-#{skeleton[:name]}" class="instructions")
           %p Execute the following code to add this skeleton to your list.
           %pre
-            %code monk add #{name} #{@skeletons[name][:repo]}
+            %code monk add #{skeleton[:name]} #{skeleton[:repo]}
 
           %p Run this command to create a new project
           %pre
-            %code monk init --skeleton=#{name} myapp
+            %code monk init --skeleton=#{skeleton[:name]} myapp
   - @all.each do |dep|
     %tr
       %td.name
@@ -23,9 +23,9 @@ Below is a list of the available skeletons and their dependencies.
       %td
         = dep[1]
 
-      - @skeletons.keys.sort.each do |name|
+      - @skeletons.each do |skeleton|
         %td.dependency
-          - if @skeletons[name][:dependencies].include?(dep)
+          - if skeleton[:dependencies].include?(dep)
             ✔
 
 %h2
