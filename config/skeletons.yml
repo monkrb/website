@@ -14,3 +14,8 @@
 - :name: gerippe
   :url: http://github.com/rkh/gerippe/tree/master
   :repo: git://github.com/rkh/gerippe.git
+
+- :name: armonk
+  :url: http://github.com/rkh/gerippe/tree/master
+  :url: http://github.com/tizoc/armonk-skeleton/tree/master
+  :repo: git://github.com/tizoc/armonk-skeleton.git
