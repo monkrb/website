@@ -15,7 +15,7 @@ Below is a list of the available skeletons and their dependencies.
 
           %p Run this command to create a new project
           %pre
-            %code monk init --skeleton=#{skeleton[:name]} myapp
+            %code monk init myapp --skeleton=#{skeleton[:name]}
   - @all.each do |dep|
     %tr
       %td.name
